@@ -6,13 +6,11 @@ services:
     image: birt-runtime:4.14.0
     restart: on-failure
     ports:
-      - "9091:8080"
+      - "8080:8080"
     networks:
       - network
     volumes:
-      # - ./reports:/usr/local/tomcat/webapps/birt/reports
       - ./reports:/usr/local/tomcat/webapps/ROOT/reports
-      # - ./index.jsp:/usr/local/tomcat/webapps/birt/index.jsp
       - ./index.jsp:/usr/local/tomcat/webapps/ROOT/index.jsp
     extra_hosts:
       - host.docker.internal:host-gateway

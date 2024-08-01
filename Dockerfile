@@ -2,6 +2,7 @@ FROM tomcat:9.0.91-jdk17-temurin
 
 RUN apt-get update && apt-get install wget unzip zip -y
 
+# Change the mirror to your preference
 RUN wget "https://eclipse.c3sl.ufpr.br/birt/updates/release/4.14.0/downloads/birt-runtime-4.14.0-202312020807.zip" -P /tmp -O "/tmp/birt.zip"
 
 RUN unzip "/tmp/birt.zip" -d "/tmp/birt"
